@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", (addTask) => {
 });
 
 document.addEventListener("DOMContentLoaded",(addTask)=>{
-    console.log(addTask);
+    addTask();
 });
