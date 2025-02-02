@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", (addTask) => {
         li.textContent = 'taskText.';
         let newButton = document.createElement('button');
         newButton.textContent = 'Remove';
-        newButton.addClassList.add('remove-btn');
+        newButton.ClassList.add('remove-btn');
         const removeBtn = document.querySelector('.remove-btn');
         removeBtn.addEventListener("onclick", ()=>{
-            // removeBtn.taskList.delete(li);
+            removeBtn.taskList.delete(li);
             li.appendChild(newButton);
             taskList.appendChild(li);
             taskInput.value = "";
