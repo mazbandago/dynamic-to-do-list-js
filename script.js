@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener("DOMContentLoaded", (addTask) => {
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
@@ -6,18 +6,38 @@ document.addEventListener('DOMContentLoaded', function(){
     function addTask(){
     const taskInputValue = document.getElementById('task-input').value;
     const taskText = taskInputValue.trim();
-    if (taskText && taskText.trim() !== '') {
-        const li = document.creatElement('li');
+    if (taskText !== '') {
+        let li = document.creatElement('li');
         li.textContent = 'taskText.';
-        const newButton = document.createElement('button');
+        let newButton = document.createElement('button');
         newButton.textContent = 'Remove';
         newButton.addClassList.add('remove-btn');
-        console.log(li);
+        const removeBtn = document.querySelector('.remove-btn');
+        removeBtn.addEventListener("onclick", ()=>{
+            // removeBtn.taskList.delete(li);
+            li.appendChild(newButton);
+            taskList.appendChild(li);
+            taskInput.value = "";
+        })
     } else{
         alert('Enter a task');
     };
-    
-
-
     }
+
+    addButton.addEventListener("clicked", (addTask) =>{
+        addTask.target;
+    });
+
+    taskInput.addEventListener("keypress", (addTask)=>{
+        if(taskInput.key =="Enter"){
+            addTask();
+        }
+    });
+
 });
+
+document.addEventListener("DOMContentLoaded",(addTask)=>{
+    console.log(addTask);
+});
+
+
