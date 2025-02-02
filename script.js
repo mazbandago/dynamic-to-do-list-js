@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", (addTask) => {
     const taskList = document.getElementById('task-list');
     
     function addTask(){
-    const taskInputValue = document.getElementById('task-input').value;
-    const taskText = taskInputValue.trim();
+    const taskText = taskInput.value.trim();
     if (taskText !== '') {
         let li = document.creatElement('li');
         li.textContent = 'taskText.';
@@ -39,5 +38,3 @@ document.addEventListener("DOMContentLoaded", (addTask) => {
 document.addEventListener("DOMContentLoaded",(addTask)=>{
     console.log(addTask);
 });
-
-
